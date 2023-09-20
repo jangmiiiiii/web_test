@@ -73,15 +73,19 @@ main {
     width: 1200px; margin: 0 auto;
 }
 main .slide {
-    width: 1200px; height: 300px; overflow: hidden; /*  */
+    width: 1200px; height: 300px; 
+    overflow-x: hidden;
+    overflow-y: auto;
 }
-main .slide .slide_contents {}
+main .slide .slide_contents {transition: all 0.5s;}
 main .slide .slide_contents .slide1 {}
 main .slide .slide_contents .slide1 img {}
 main .slide .slide_contents .slide2 {}
 main .slide .slide_contents .slide2 img {}
 main .slide .slide_contents .slide3 {}
 main .slide .slide_contents .slide3 img {}
+main .slide .slide_contents div,
+main .slide .slide_contents div img { line-height: 0;} /* slide 위에 뜬공간 잡아줌 */
 
 main .c {display: flex;}
 main .c > * {width: 400px; height: 200px;}

@@ -37,3 +37,21 @@ $('.c12 .title a:last-child').on('click',function(){
     $('.c2').show();
     $('.c1').hide();
 })
+
+//슬라이드
+
+/* 이미지가 위에서 아래 또는 아래에서 위로 이동하면서 전환되어야 한다. 
+❍ 슬라이드는 매 3초 이내로 하나의 이미지에서 다른 이미지로 전환되어야 한다. 
+❍ 웹사이트를 열었을 때 자동으로 시작되어 반복적으로
+(마지막 이미지가 슬라이드 되면 다시 첫 번째 이미지가 슬라이드 되는 방식) 슬라이드 되어야한다. */
+let count = 0
+// 0, 300 , 600 (높이) 반복할 것임
+/*setInterval 일정시간동안 반복한다 */
+setInterval(function(){
+    //console.log(count++)
+    count++ /* 3 */
+    if(count>2){count=0}/* count 0.1.2 2보다 크면 0으로 돌아가라 */ /* 4 */
+    let total = count * 300 /* 1 */
+    console.log(total)
+    $('.slide_contents').css('transform',`translateY(-${total}px)`) /* ``-> 바뀔변수 작성하는것 */
+},3000) /* 2 */
